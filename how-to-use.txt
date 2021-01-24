@@ -1,3 +1,3 @@
-1) Run "npn install"
-2) Run "npn start"
+1) Run "npm install"
+2) Run "npm start"
 Happy Coding :)
