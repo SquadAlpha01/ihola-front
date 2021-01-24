@@ -1,0 +1,3 @@
+1) Run "npn install"
+2) Run "npn start"
+Happy Coding :)
