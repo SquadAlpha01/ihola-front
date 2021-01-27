@@ -1,0 +1,8 @@
+.messageArea {
+    background: linear-gradient(#0D1232 15%, #00AEEF 80%);
+    display: table-row;
+}
+
+.messageAreaContent {
+    display: table-cell;
+}
