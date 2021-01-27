@@ -5,7 +5,7 @@ import Message from './message/message'
 const messageArea = (props) => {
     const messages = []
     props.messages.forEach(message => {
-        messages.push(<Message content={message.messageContent}></Message>)
+        messages.push(<Message message={message}></Message>)
     })
 
     return (
