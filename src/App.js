@@ -1,9 +1,10 @@
 import classes from "./App.module.css";
+import Main from "./pages/main/main"
 
 function App() {
   return (
-    <div className={classes.App}>
-      <h1>Welcome to iHola!, alphaSquad</h1>
+    <div>
+      <Main></Main>
     </div>
   );
 }
