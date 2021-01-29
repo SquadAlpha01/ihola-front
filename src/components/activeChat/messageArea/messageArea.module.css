@@ -1,7 +1,6 @@
 .messageArea {
     background: linear-gradient(#0D1232 15%, #00AEEF 80%);
     position: relative;
-    height: 600px;
 }
 
 .messageAreaContent {

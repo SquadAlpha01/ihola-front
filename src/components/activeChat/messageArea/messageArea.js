@@ -11,7 +11,7 @@ const messageArea = (props) => {
     return (
         <div className={classes.messageArea}>
             <div className={classes.messageAreaContent}>        
-                <p style={{color: "#909497"}}>Conversation Started</p>
+                <p style={{color: "#909497", textAlign: 'center'}}>Conversation Started</p>
                 {messages}
             </div>
         </div>
