@@ -1,8 +1,15 @@
 .messageArea {
     background: linear-gradient(#0D1232 15%, #00AEEF 80%);
-    display: table-row;
+    position: relative;
+    height: 600px;
 }
 
 .messageAreaContent {
-    display: table-cell;
+    flex-direction: column;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }

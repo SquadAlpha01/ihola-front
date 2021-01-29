@@ -1,7 +1,9 @@
 .messageBackground {
     background-color: #7881A0;
     border-radius: 10px;
-    width: 60%;
+    max-width: 55%;
+    width: fit-content;
+    min-width: min-content;
     margin: 15px 10px;
     display: flex;
 }
@@ -38,5 +40,5 @@
 }
 
 .owner {
-    float: right;
+    margin-left: auto;
 }
