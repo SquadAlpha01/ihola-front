@@ -1,11 +1,10 @@
 import classes from "./App.module.css";
-import ActiveChat from "./components/activeChat/activeChat"
+import Main from "./pages/main/main"
 
 function App() {
   return (
-    <div className={classes.App}>
-      <ActiveChat></ActiveChat>
-      <h1>Welcome to iHola!, alphaSquad</h1>
+    <div>
+      <Main></Main>
     </div>
   );
 }
