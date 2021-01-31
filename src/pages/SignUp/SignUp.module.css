@@ -3,7 +3,7 @@ p {
     font-size: 12px;
 }
 
-.SignUp{
+.Login{
     box-sizing: border-box;
     padding: 8px;
     color:white;
@@ -12,7 +12,7 @@ p {
     justify-content: space-between;
 }
 
-.SignUp a{
+.Login a{
     margin: 12px;
     cursor: pointer;
     text-decoration: none;
@@ -20,6 +20,6 @@ p {
 }
 
 
-.SignUp a:hover{
+.Login a:hover{
 color: white;
 }

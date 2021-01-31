@@ -4,3 +4,15 @@
     grid-template-rows: 1fr 14fr;
     height: 100vh;
 }
+
+.HomeBackground{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #0D1232;
+    background-size: cover;
+    width: 100%;
+}
