@@ -11,9 +11,9 @@ const Login = () => (
         <p style={{fontSize:"16px", textAlign:"center"}}>Login</p>
         <p style={{textAlign:"center"}}>Login to continue to iHOLA!</p>
         <p>Email</p>
-        <InputField placeholder='Please Enter Your Email'/>
+        <InputField type ='email' placeholder='Please Enter Your Email'/>
         <p>Password</p>
-        <InputField placeholder='Please Enter Your Password'/>
+        <InputField type ='password' placeholder='Please Enter Your Password'/>
         <Button content='Login'/>
         <div className={classes.SignUp}>
             <p>Dont have an account?</p>

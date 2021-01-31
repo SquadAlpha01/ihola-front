@@ -11,11 +11,11 @@ const SignUp = () => (
         <p style={{fontSize:"16px", textAlign:"center"}}>Sign Up</p>
         <p style={{textAlign:"center"}}>Get your iHola account now!</p>
         <p>Email</p>
-        <InputField placeholder='Please Enter Your Email'/>
+        <InputField type ='email' placeholder='Please Enter Your Email'/>
         <p>Username</p>
-        <InputField placeholder='Please Enter Your Username'/>
+        <InputField type ='text' placeholder='Please Enter Your Username'/>
         <p>Password</p>
-        <InputField placeholder='Please Enter Your Password'/>
+        <InputField type ='password' placeholder='Please Enter Your Password'/>
         <Button content='Sign Up'/>
         <div className={classes.Login}>
             <p>Already have an acount?</p>
