@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './newMessage.module.css';
 import {ReactComponent as SendIcon} from '../../../assets/images/send_icon.svg'
 
-const MessageSeenIcon = <span className={classes.receivingStatus}> 
-                            <SendIcon ></SendIcon>
-                        </span>
-const newMessageContainer = (props) => (
+const NewMessageContainer = (props) => {
+    const [newContent, setNewContent] = useState("")
+
+    return (
     <div className={classes.newMessageContainer}>
-        <textarea className={classes.newMessageTextField} id="newMessageTextField" name="newMessageTextField" rows="1" placeholder="Enter Message ...">
-        </textarea>
+        <input className={classes.newMessageTextField} 
+            value={newContent}
+            onChange={e => setNewContent(e.target.value)}
+            rows="1" 
+            placeholder="Enter Message ...">
+        </input>
         <button 
             className={classes.sendMessageButton} 
-            onClick={props.sendMessage}>
+            onClick={() => props.sendMessage(newContent) }
+            >
             <SendIcon width="30px" height="30px"></SendIcon>
         </button>
-    </div>
-);
+    </div>)
+};
 
-export default newMessageContainer;
+export default NewMessageContainer;

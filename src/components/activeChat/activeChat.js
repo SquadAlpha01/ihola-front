@@ -32,12 +32,39 @@ class ActiveChat extends Component {
         receiverName: "Ramez"
     }
 
+    getCurrentTime = () => {
+        const today = new Date();
+        if (today.getHours() >=12) {
+            const hours = today.getHours() === 12 ? 12: today.getHours() % 12
+            return `${hours}:${today.getMinutes()} PM`
+        } else {
+            return `${today.getHours()}:${today.getMinutes()} AM`
+        }
+    } 
+
+    sendMessage = (newMsgContent) => {
+        if (!newMsgContent) {
+            return
+        }
+        const messages = [...this.state.messages, {
+            content: newMsgContent,
+            isSeen: false,
+            isSent: false,
+            isOwner: true,
+            date: this.getCurrentTime()
+        }]
+        this.setState({
+            ...this.state,
+            messages
+        })
+    }
+
     render() {
         return (
             <div class={classes.activeChat}>
                 <Header receiverName={this.state.receiverName} />
                 <MessageArea messages={this.state.messages}/>
-                <NewMessage />
+                <NewMessage sendMessage={this.sendMessage}/>
             </div>
         )
     }
