@@ -4,32 +4,19 @@ import Header from './header/header'
 import MessageArea from './messageArea/messageArea'
 import NewMessage from './newMessage/newMessage'
 
+import * as actions  from '../../store/actions'
+import { connect } from 'react-redux';
+
 class ActiveChat extends Component { 
     state = {
         easy: "peasy",
-        messages: [
-            {content: "look there is a cat.", isSeen: true, isSent: true, isOwner: !false, date: "10:40 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: true, isSent: true, isOwner: !true, date: "10:41 PM"}, 
-            {content: "That is cause you are phaaat !!", isSeen: true, isSent: true, isOwner: !false, date: "10:42 PM"}, 
-            {content: "That is cause you are phaaat !!", isSeen: true, isSent: true, isOwner: !false, date: "10:43 PM"}, 
-            {content: "That is cause you are phaaat !!That is cause you are phaaat !!That is cause you are phaaat !!That is cause you are phaaat !!That is cause you are phaaat !!That is cause you are phaaat !!That is cause you are phaaat !!That is cause you are phaaat !!  ", isSeen: true, isSent: true, isOwner: !false, date: "10:45 PM"}, 
-            {content: "That is cause you are phaaat !!", isSeen: false, isSent: true, isOwner: !false, date: "10:40 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: true, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "Nah! not interested in chat", isSeen: false, isSent: false, isOwner: !true, date: "11:13 PM"}, 
-            {content: "That is cause you are phaaat !!", isSeen: false, isSent: false, isOwner: !false, date: "11:14 PM"}],
         senderIcon: false,
         receiverIcon: false,
         receiverName: "Ramez"
+    }
+
+    componentDidMount () {
+        this.props.onInitMessages();
     }
 
     getCurrentTime = () => {
@@ -46,29 +33,48 @@ class ActiveChat extends Component {
         if (!newMsgContent) {
             return
         }
-        const messages = [...this.state.messages, {
+        const newMessage = {
             content: newMsgContent,
             isSeen: false,
             isSent: false,
             isOwner: true,
             date: this.getCurrentTime()
-        }]
-        this.setState({
-            ...this.state,
-            messages
-        })
+        };
+
+        this.props.onSendMessage(newMessage)
+        // this.setState({
+            // ...this.state,
+            // messages
+        // })
     }
 
     render() {
         return (
             <div class={classes.activeChat}>
                 <Header receiverName={this.state.receiverName} />
-                <MessageArea messages={this.state.messages}/>
+                <MessageArea messages={this.props.messages}/>
                 <NewMessage sendMessage={this.sendMessage}/>
             </div>
         )
     }
 
 }
+const mapStateToProps = state => {
+    return {
+        messages: state.messages.messages,
+        downloadError: state.messages.downloadError,
+    };
+}
 
-export default ActiveChat;
+const mapDispatchToProps = dispatch => {
+    return {
+        onSendMessage: (messageContent) => dispatch(actions.sendMsg(messageContent)),
+        onInitMessages: () => dispatch(actions.downloadMsgs()),
+        onMyMsgReceived: () => dispatch(actions.myMsgReceived()),
+        onMyMsgSeen: () => dispatch(actions.myMsgSeen()),
+        onTheirMsgReceived: () => dispatch(actions.theirMsgReceived()),
+        onTheirMSgSeen: () => dispatch(actions.theirMSgSeen()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ActiveChat);
