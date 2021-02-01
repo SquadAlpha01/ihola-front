@@ -2,6 +2,8 @@ import React from 'react';
 import Badge from '@material-ui/core/Badge';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import imgCat from './FatCat.jpg'
+import EditIcon from '../../assets/images/editIcon.png';
 
 const SmallAvatar = withStyles((theme) => ({
   root: {
@@ -39,9 +41,9 @@ export default function BadgeAvatars() {
           vertical: 'bottom',
           horizontal: 'right',
         }}
-        badgeContent={<SmallAvatar alt="edit" src="FatCat.jpg" />}
+        badgeContent={<SmallAvatar alt="edit" src={EditIcon} />}
       >
-        <BigAvatar alt="profile picture" src="https://www.w3schools.com/images/img_girl.jpg" />
+        <BigAvatar alt="profile picture" src={imgCat} />
       </Badge>
     </div>
   );

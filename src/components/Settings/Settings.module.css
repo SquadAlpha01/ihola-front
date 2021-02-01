@@ -4,6 +4,7 @@
     height: 100vh;
     background-color: #7881A0;
     background-size: cover;
+    overflow: scroll;
     align-items:center;
 
 }
