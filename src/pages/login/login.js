@@ -5,7 +5,10 @@ import Logo from '../../UI/Logo/Logo';
 import classes from './Login.module.css';
 
 
-const Login = () => (
+const Login = (props) => {
+  
+   
+    return(
     <div className={classes.p}>
         <Logo/>
         <p style={{fontSize:"16px", textAlign:"center"}}>Login</p>
@@ -20,6 +23,8 @@ const Login = () => (
             <a>Sign up now !</a>
         </div>      
     </div>
-);
+    );
+
+}
 
 export default Login;

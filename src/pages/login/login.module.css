@@ -23,3 +23,9 @@ p {
 .SignUp a:hover{
 color: white;
 }
+
+.Alert{
+    margin-top: 15px ;
+    height: 40px;
+    box-sizing: border-box;
+}

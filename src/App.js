@@ -4,7 +4,7 @@ import Main from "./pages/main/main"
 function App() {
   return (
     <div>
-    <Main page="login" />
+    <Main page="chat" />
   </div>
   );
 }

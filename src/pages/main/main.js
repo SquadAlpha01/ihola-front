@@ -17,7 +17,7 @@ const Main = (props) => {
             displayed =  <div className={classes.HomeBackground}><SignUp/></div>;
             break;
         case('login'):
-             displayed =  <div className={classes.HomeBackground}><Login/></div>;
+             displayed =  <div className={classes.HomeBackground}><Login alert='true'/></div>;
              break;
         case('chat'):
              displayed =  <div class={classes.main}>
