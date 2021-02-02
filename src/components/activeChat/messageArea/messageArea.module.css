@@ -1,5 +1,5 @@
 .messageArea {
-    background: linear-gradient(#0D1232 15%, #00AEEF 80%);
+    background: transparent linear-gradient(180deg, #0D1232 0%, #040611 0%, #121F72 49%, #00AEEF 100%) 0% 0% no-repeat padding-box;
     position: relative;
 }
 

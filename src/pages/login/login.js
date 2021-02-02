@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import InputField from '../../UI/InputField/InputField';
 import Button from '../../UI/Button/Button';
 import Logo from '../../UI/Logo/Logo';
-import classes from './Login.module.css';
+import classes from './login.module.css';
 import { SnackbarProvider, useSnackbar } from "notistack";
 
 const Login = (props) =>  {

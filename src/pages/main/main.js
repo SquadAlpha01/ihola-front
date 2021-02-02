@@ -6,7 +6,7 @@ import NavBar from '../../components/navBar/navBar';
 import Sidebar from '../../components/sideBar/sideBar';
 
 import SignUp from '../SignUp/SignUp';
-import Login from '../Login/Login';
+import Login from '../login/login';
 
 const Main = (props) => {
 
