@@ -11,7 +11,7 @@ class Main extends Component {
 
     render() {
         return (
-            <div class={classes.main}>
+            <div className={classes.main}>
                 <NavBar/>
                 <ActiveChat/>
                 <Sidebar/>
