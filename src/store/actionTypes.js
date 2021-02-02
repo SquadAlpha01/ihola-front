@@ -1,0 +1,9 @@
+export const FIND_USER_INIT = "FIND_USER_INIT"
+export const FIND_USER_SUCCESS = "FIND_USER_SUCCESS"
+export const FIND_USER_FAIL = "FIND_USER_FAIL"
+ 
+
+
+export const ADD_USER_INIT = "ADD_USER_INIT"
+export const ADD_USER_SUCCESS = "ADD_USER_SUCCESS"
+export const ADD_USER_FAIL = "ADD_USER_FAIL"
