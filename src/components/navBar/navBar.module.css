@@ -2,4 +2,23 @@
     grid-column-end: 4;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: flex;
+    background-color: #0D1232;
+    padding: 0px 15px;
+    flex-direction: row;
+}
+
+.navButton {
+    margin: 0px 10px;
+    justify-self:center;
+    background-color: transparent;
+    cursor:pointer;
+    border:none;
+    outline: none;
+    width: 100%;
+
+}
+
+.navButtonSelected {
+    background-color: #2D3463;
 }
