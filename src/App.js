@@ -4,8 +4,8 @@ import Main from "./pages/main/main"
 function App() {
   return (
     <div>
-      <Main></Main>
-    </div>
+    <Main page="chat" />
+  </div>
   );
 }
 

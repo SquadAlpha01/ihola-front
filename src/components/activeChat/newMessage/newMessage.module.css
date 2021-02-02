@@ -1,0 +1,19 @@
+.newMessageContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.newMessageTextField {
+    border-radius: 20px;
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.sendMessageButton {
+    border-radius: 10px;
+    background-color: #4F5473;
+    padding: 10px;
+    margin: 10px;
+}

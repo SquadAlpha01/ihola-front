@@ -1,0 +1,44 @@
+.messageBackground {
+    background-color: #C4CDD494;
+    border-radius: 10px;
+    max-width: 55%;
+    width: fit-content;
+    min-width: min-content;
+    margin: 15px 10px;
+    display: flex;
+}
+
+.messageContent {
+    text-align: left;
+    margin: 1em;
+}
+
+.messageStatus {
+    margin-left: auto;
+    display: flex;
+    color: white;
+    font-size: 0.8em;
+    max-height: fit-content;
+    min-width: fit-content;
+    flex-direction: column;
+    
+    justify-content: space-between;
+}
+
+.date {
+    color: white;
+    font-size: 0.8em;
+    max-height: fit-content;
+    min-width: fit-content;
+    margin: 10px;
+}
+
+.receivingStatus {
+    max-width: fit-content;
+    align-self: flex-end;
+    margin-right: 5px;
+}
+
+.owner {
+    margin-left: auto;
+}

@@ -1,0 +1,33 @@
+.messageArea {
+    background: transparent linear-gradient(180deg, #0D1232 0%, #040611 0%, #121F72 49%, #00AEEF 100%) 0% 0% no-repeat padding-box;
+    position: relative;
+}
+
+.messageAreaContent {
+    flex-direction: column;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#00AEEF ;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:#121F72;
+}

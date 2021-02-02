@@ -1,0 +1,11 @@
+.Logo{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;   
+}
+
+.Logo img {
+    max-height: 200px;
+    max-width: auto;
+
+}
