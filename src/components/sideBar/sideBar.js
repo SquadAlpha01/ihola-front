@@ -2,7 +2,7 @@ import { React } from 'react'
 import classes from './sideBar.module.css';
 import Settings from '../Settings/Settings'
 import ChatsBar from '../chatSidebar/chatSidebar';
-import FindUserView from '../../pages/findUserView/findUserView';
+import FindUserView from '../../components/findUserView/findUserView';
 
 const sideBar = (props) => (
     <div className={classes.sideBar}>
